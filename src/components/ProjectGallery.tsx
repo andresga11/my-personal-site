@@ -1,4 +1,6 @@
 import { label } from "motion/react-client";
+import { motion } from "framer-motion";
+
 import ProjectCard from "./ProjectCard";
 
 export const projects = [
@@ -38,7 +40,12 @@ export const projects = [
 
 const ProjectGallery = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto py-8">
+    <motion.section
+      className="w-full max-w-6xl mx-auto py-8"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 1.5 }}
+    >
       <div className="mb-6 flex items-end justify-between gap-4">
         <div>
           <h2 className="text-2xl md:text-3xl ">Projects</h2>
@@ -46,7 +53,7 @@ const ProjectGallery = () => {
         </div>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-2">
+      <motion.div className="grid gap-8 md:grid-cols-2">
         {projects.map((project) => (
           <ProjectCard
             key={project.title}
@@ -58,8 +65,8 @@ const ProjectGallery = () => {
             imageUrl={project.imageUrl}
           />
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

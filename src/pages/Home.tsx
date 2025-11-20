@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 const _ignore = motion; // marks it as "read" for some configs
 import SpotifyPlaying from "../components/SpotifyPlaying";
 import ProjectGallery from "../components/ProjectGallery";
+import Timeline from "../components/Timeline";
 import me from "../assets/IMG_1 copy.png";
 
 export default function Home() {
@@ -49,14 +50,18 @@ export default function Home() {
         />
       </p>
 
-      <motion.section className="mt-4">
+      {/* <motion.section className="mt-4">
         <div>
           <SpotifyPlaying />
         </div>
-      </motion.section>
+      </motion.section> */}
 
       <div>
         <ProjectGallery />
+      </div>
+
+      <div>
+        <Timeline />
       </div>
     </div>
   );
