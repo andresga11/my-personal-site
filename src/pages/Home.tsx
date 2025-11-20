@@ -3,6 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 const _ignore = motion; // marks it as "read" for some configs
 import SpotifyPlaying from "../components/SpotifyPlaying";
+import ProjectCard from "../components/ProjectCard";
 import me from "../assets/IMG_1 copy.png";
 
 export default function Home() {
@@ -53,6 +54,16 @@ export default function Home() {
           <SpotifyPlaying />
         </div>
       </motion.section>
+
+      <div>
+        <ProjectCard
+          title="Project 1"
+          subtitle="This is the first project"
+          hoverTitle="Hover Title"
+          hoverSubtitle="Hover Subtitle"
+          imageUrl="https://picsum.photos/600/300"
+        />
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import StackedGallery from "./StackedGallery";
-import d from "../assets/dog.png";
+// import d from "../assets/dog.png";
 
-const demoImages = [ d, d, d, d, d, ];
+const demoImages = [ "https://picsum.photos/200/300", "https://picsum.photos/200/301", "https://picsum.photos/200/302", "https://picsum.photos/200/303", "https://picsum.photos/200/304"];
 
 export default function Gallery() {
   return (

@@ -43,7 +43,7 @@ export const theme = {
     
     // Background colors
     bg: {
-      primary: '#000000',    // Main site background
+      primary: '#111113',    // Main site background
       secondary: '#222222',  // Used for Gear items and photo card backs
       tertiary: '#818CF8',   // Used for hover states and borders
     },
