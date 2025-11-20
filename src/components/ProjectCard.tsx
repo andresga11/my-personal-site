@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 type ProjectCardProps = {
+  label: string;
   title: string;
   subtitle: string;
   hoverTitle: string;
@@ -10,6 +11,7 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({
+  label,
   title,
   subtitle,
   hoverTitle,
@@ -40,7 +42,7 @@ const ProjectCard = ({
 
       <div className="absolute top-4 left-1/2 -translate-x-1/2">
         <p className="text-3xl uppercase tracking-[0.2em] font-bold text-white/90">
-          Porsche
+          {label}
         </p>
       </div>
 
