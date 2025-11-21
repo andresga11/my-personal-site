@@ -23,6 +23,8 @@ const ProjectCard = ({
   return (
     <motion.div
       className="relative h-80 w-full max-w-4xl overflow-hidden rounded-3xl bg-black text-white"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{ scale: 1.02 }}

@@ -7,7 +7,11 @@ export const Timeline = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 1.5 }}
+    >
       <h2 className="text-2xl md:text-3xl mb-10 ">Timeline</h2>
       {/* Section scales when hovered anywhere inside */}
       <motion.section
@@ -68,7 +72,7 @@ export const Timeline = () => {
           ))}
         </ol>
       </motion.section>
-    </div>
+    </motion.div>
   );
 };
 
